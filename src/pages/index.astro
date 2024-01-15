@@ -1,0 +1,33 @@
+---
+import "@/styles/globals.css";
+import Layout from "../layouts/Layout.astro";
+import { Separator } from "@/components/ui/separator";
+import { SideMenu } from "@/components/SideMenu";
+import { ComicCards } from "@/components/ComicCards";
+
+const cardOnClick = () => {
+	Astro.redirect("/reader");
+};
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="flex justify-between">
+			<div class="flex flex-col">
+				<div class="text-lg">Reader</div>
+				<div class="text-sm text-muted-foreground">
+					The last comic reader solution
+				</div>
+			</div>
+
+			<SideMenu client:load />
+		</div>
+
+		<Separator />
+
+		<div class="grid grid-cols-2 gap-2 py-2">
+			<a href="/reader"><ComicCards client:load /></a>
+			<ComicCards client:load />
+		</div>
+	</main>
+</Layout>

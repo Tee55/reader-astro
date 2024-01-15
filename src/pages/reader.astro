@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { ComicReader } from "@/components/ComicReader";
+import { ComicReaderMenu } from "@/components/ComicReaderMenu";
+import { AnnotationCards } from "@/components/AnnotationCards";
+---
+
+<Layout title="reader">
+    <main>
+        <div class="grid grid-cols-1 gap-2">
+            <div class="flex">
+                <ComicReaderMenu client:load />
+            </div>
+
+            <div class="grid grid-cols-3">
+                <!-- List of annotation cards -->
+                <AnnotationCards client:load />
+
+                <!-- Comic reader -->
+                <ComicReader client:only />
+            </div>
+        </div>
+    </main>
+</Layout>
