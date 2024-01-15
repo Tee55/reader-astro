@@ -11,4 +11,4 @@ Serving the app
 npm run dev
 ```
 ## Preview
-![Alt text](src\assets\screenshot.png "Screenshot")
+![Screenshot](src\assets\screenshot.png)
