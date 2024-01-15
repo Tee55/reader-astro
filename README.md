@@ -11,4 +11,4 @@ Serving the app
 npm run dev
 ```
 ## Preview
-![Screenshot](src\assets\screenshot.png)
+![Screenshot](src/assets/screenshot.png)
